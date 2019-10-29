@@ -58,11 +58,13 @@ Partial Class loginScreen
         Me.userText.Name = "userText"
         Me.userText.Size = New System.Drawing.Size(226, 20)
         Me.userText.TabIndex = 2
+        Me.userText.Text = "0101190012"
         '
         'passwordText
         '
         Me.passwordText.Location = New System.Drawing.Point(16, 103)
         Me.passwordText.Name = "passwordText"
+        Me.passwordText.PasswordChar = Global.Microsoft.VisualBasic.ChrW(65290)
         Me.passwordText.Size = New System.Drawing.Size(226, 20)
         Me.passwordText.TabIndex = 3
         '

@@ -25,9 +25,11 @@
                     um.ID = reader(0).ToString
                     If isMhs Then
                         um.ASS = 2
+                        dashboardMhs.users = um
                         dashboardMhs.ShowDialog()
                     Else
                         um.ASS = 1
+                        dashboardDsn.users = um
                         dashboardDsn.ShowDialog()
                     End If
                 End If

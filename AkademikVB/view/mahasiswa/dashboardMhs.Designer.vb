@@ -26,15 +26,18 @@ Partial Class dashboardMhs
         Me.btnLogout = New System.Windows.Forms.Button()
         Me.btnShowKRS = New System.Windows.Forms.Button()
         Me.btnCreateKRS = New System.Windows.Forms.Button()
+        Me.lblClass = New System.Windows.Forms.Label()
+        Me.lblID = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'lblWelcome
         '
         Me.lblWelcome.AutoSize = True
-        Me.lblWelcome.Font = New System.Drawing.Font("Microsoft Sans Serif", 22.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.lblWelcome.Font = New System.Drawing.Font("Microsoft Sans Serif", 28.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.lblWelcome.ForeColor = System.Drawing.Color.Blue
         Me.lblWelcome.Location = New System.Drawing.Point(13, 13)
         Me.lblWelcome.Name = "lblWelcome"
-        Me.lblWelcome.Size = New System.Drawing.Size(243, 36)
+        Me.lblWelcome.Size = New System.Drawing.Size(313, 44)
         Me.lblWelcome.TabIndex = 0
         Me.lblWelcome.Text = "Welcome , 春宮さ"
         '
@@ -65,11 +68,32 @@ Partial Class dashboardMhs
         Me.btnCreateKRS.Text = "Buat KRS"
         Me.btnCreateKRS.UseVisualStyleBackColor = True
         '
+        'lblClass
+        '
+        Me.lblClass.AutoSize = True
+        Me.lblClass.Location = New System.Drawing.Point(20, 92)
+        Me.lblClass.Name = "lblClass"
+        Me.lblClass.Size = New System.Drawing.Size(220, 13)
+        Me.lblClass.TabIndex = 7
+        Me.lblClass.Text = "Ilmu Komputer @ Teknik Informatika - SMT 1"
+        '
+        'lblID
+        '
+        Me.lblID.AutoSize = True
+        Me.lblID.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.lblID.Location = New System.Drawing.Point(18, 57)
+        Me.lblID.Name = "lblID"
+        Me.lblID.Size = New System.Drawing.Size(180, 26)
+        Me.lblID.TabIndex = 8
+        Me.lblID.Text = "09019019091090"
+        '
         'dashboardMhs
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.lblID)
+        Me.Controls.Add(Me.lblClass)
         Me.Controls.Add(Me.btnShowKRS)
         Me.Controls.Add(Me.btnCreateKRS)
         Me.Controls.Add(Me.btnLogout)
@@ -86,4 +110,6 @@ Partial Class dashboardMhs
     Friend WithEvents btnLogout As Button
     Friend WithEvents btnCreateKRS As Button
     Friend WithEvents btnShowKRS As Button
+    Friend WithEvents lblClass As Label
+    Friend WithEvents lblID As Label
 End Class
