@@ -35,9 +35,8 @@
                 Dim nmk = ds.Tables(0).Rows(i).Item(1)
                 Dim dsn = ds.Tables(0).Rows(i).Item(2)
                 Dim kel = ds.Tables(0).Rows(i).Item(0)
-                Console.WriteLine(da.ToString)
 
-                krsDGV.Rows.Add(mk, nmk, dsn, kel)
+                krsDGV.Rows.Add(mk, nmk, dsn)
             Next
         Catch ex As Exception
             MessageBox.Show(ex.Message)
@@ -49,6 +48,5 @@
         krsDGV.Columns.Add("cmk", "Kode MK")
         krsDGV.Columns.Add("nmk", "Mata Kuliah")
         krsDGV.Columns.Add("ndosen", "Dosen")
-        krsDGV.Columns.Add("ckelompok", "Kelompok")
     End Sub
 End Class

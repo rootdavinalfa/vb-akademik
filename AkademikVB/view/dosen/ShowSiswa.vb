@@ -42,8 +42,6 @@
         Try
             initDGV()
             Dim idmk = pickMK.SelectedValue.ToString
-            Console.WriteLine(pickMK.SelectedIndex)
-            Console.WriteLine(idmk)
             ds.Clear()
             Dim sql = "SELECT mahasiswaList.NIM, mahasiswaList.Nama, matakuliahList.idMataKuliah, matakuliahList.MataKuliah, mahasiswaList.Semester, pengajar.dosen
                        FROM mahasiswaList INNER JOIN ((matakuliahList INNER JOIN pengajar ON matakuliahList.idMataKuliah = pengajar.idMK) INNER JOIN krs ON pengajar.idPengajar = krs.idpengajar) ON mahasiswaList.NIM = krs.mahasiswa
@@ -55,11 +53,11 @@
             Dim da As New OleDb.OleDbDataAdapter(ole)
             da.Fill(ds)
             For i = 0 To ds.Tables(0).Rows.Count - 1
-                Dim cmk = ds.Tables(0).Rows(i).Item(1)
-                Dim nmk = ds.Tables(0).Rows(i).Item(2)
-                Dim nim = ds.Tables(0).Rows(i).Item(4)
-                Dim nama = ds.Tables(0).Rows(i).Item(5)
-                Dim smt = ds.Tables(0).Rows(i).Item(3)
+                Dim cmk = ds.Tables(0).Rows(i).Item(2)
+                Dim nmk = ds.Tables(0).Rows(i).Item(3)
+                Dim nim = ds.Tables(0).Rows(i).Item(0)
+                Dim nama = ds.Tables(0).Rows(i).Item(1)
+                Dim smt = ds.Tables(0).Rows(i).Item(4)
 
                 dgvSiswa.Rows.Add(cmk, nmk, nim, nama, smt)
             Next

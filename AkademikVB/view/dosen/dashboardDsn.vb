@@ -38,6 +38,7 @@
     End Sub
 
     Private Sub BtnShowMK_Click(sender As Object, e As EventArgs) Handles btnShowMK.Click
+        ShowNgajar.datas = users
         ShowNgajar.ShowDialog()
     End Sub
 End Class

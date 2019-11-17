@@ -58,7 +58,7 @@ Partial Class loginScreen
         Me.userText.Name = "userText"
         Me.userText.Size = New System.Drawing.Size(226, 20)
         Me.userText.TabIndex = 2
-        Me.userText.Text = "0101190011"
+        Me.userText.Text = "0101190012"
         '
         'passwordText
         '
