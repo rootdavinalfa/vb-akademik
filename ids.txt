@@ -1,0 +1,40 @@
+DOSEN = 10 Digit  XXYYZZAAAK
+MAHASISWA = 10 Digit XXYYZZAAAK
+IDMK = 10 Digit XXYYBBCCCC
+
+
+
+X = Fakultas 2 digit
+Y = Jurusan 2 digit
+Z = Tahun Masuk 2 digit belakang
+A = 3 digit nomor induk 
+K = 1 untuk dosen 2 untuk mahasiswa
+B = 2 digit kelompok
+C = 4 digit kodemk
+
+
+Dummy data
+
+======DOSEN=======
+0101190011 Takamiya Hifumi
+0101190021 Takemoto Hitsuji
+0101190031 Haruki Miu
+
+
+===END OF DOSEN===
+
+====MAHASISWA=====
+0101190012 Tenkyo Amatsuki
+0101190022 Akemiya Konami
+0101190032 Bitshuji Hanamiya
+0201190042 Shomyu Kanae
+====END OF MAHASISWA====
+
+===MK====
+0101010001 Pemprograman Web
+0101010002 Pemprograman Desktop 1
+0202010003 Bahasa Jepang Dasar
+0202010004 N4 Training
+0202010005 Bahasa Jepang Specialized
+
+===END OF MK====
