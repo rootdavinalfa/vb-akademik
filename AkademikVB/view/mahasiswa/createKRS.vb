@@ -127,8 +127,8 @@
                     Console.WriteLine(ex.Message)
                 End Try
             Next
-            dgvAvail.Rows.Clear()
-            dgvAvail.Columns.Clear()
+            dgvPicked.Rows.Clear()
+            dgvPicked.Columns.Clear()
         Else
             MessageBox.Show("Anda masih merequest KRS,silahkan hubungi akademik untuk reset")
         End If
