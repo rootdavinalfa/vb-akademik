@@ -67,6 +67,7 @@ Partial Class loginScreen
         Me.passwordText.PasswordChar = Global.Microsoft.VisualBasic.ChrW(65290)
         Me.passwordText.Size = New System.Drawing.Size(226, 20)
         Me.passwordText.TabIndex = 3
+        Me.passwordText.Text = "123"
         '
         'btnLogin
         '
