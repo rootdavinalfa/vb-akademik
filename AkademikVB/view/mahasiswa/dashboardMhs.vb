@@ -22,12 +22,10 @@
                     lblID.Text = users.ID
                     lblClass.Text = String.Format("{0} @ Fakultas {1} Semester {2}", reader(0), reader(1), reader(3))
                     users.Name = reader(2).ToString
-
                     users.Semester = IIf(Convert.IsDBNull(reader(3)), 0, reader(3))
-                    users.Kelompok = IIf(Convert.IsDBNull(reader(4)), 0, reader(3))
-                    users.Fakultas = IIf(Convert.IsDBNull(reader(5)), 0, reader(3))
-                    users.Jurusan = IIf(Convert.IsDBNull(reader(6)), 0, reader(3))
-
+                    users.Kelompok = IIf(Convert.IsDBNull(reader(4)), 0, reader(4))
+                    users.Fakultas = IIf(Convert.IsDBNull(reader(5)), 0, reader(5))
+                    users.Jurusan = IIf(Convert.IsDBNull(reader(6)), 0, reader(6))
                 End If
             Else
                 Application.Exit()

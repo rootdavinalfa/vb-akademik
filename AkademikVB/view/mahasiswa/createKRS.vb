@@ -19,6 +19,7 @@
                 dgvAvail.Enabled = False
                 initReq()
             Else
+                dgvAvail.Enabled = True
                 initKrs()
             End If
         End If
@@ -66,6 +67,7 @@
                 FROM matakuliahList INNER JOIN (dosenList INNER JOIN pengajar ON dosenList.NID = pengajar.dosen) ON matakuliahList.idMataKuliah = pengajar.idMK
                 WHERE (((pengajar.kelompok)=@1));
                 "
+            Console.WriteLine(datas.Name)
             Dim ole = con.CreateCommand()
             ole.CommandText = Sqls
             ole.Parameters.Add(New OleDb.OleDbParameter("@1", datas.Kelompok))
