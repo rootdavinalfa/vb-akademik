@@ -22,20 +22,11 @@ Partial Class dashboardDsn
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.btnShowMK = New System.Windows.Forms.Button()
         Me.btnShowMahasiswa = New System.Windows.Forms.Button()
         Me.btnLogout = New System.Windows.Forms.Button()
         Me.lblWelcome = New System.Windows.Forms.Label()
+        Me.btnShowMK = New System.Windows.Forms.Button()
         Me.SuspendLayout()
-        '
-        'btnShowMK
-        '
-        Me.btnShowMK.Location = New System.Drawing.Point(484, 156)
-        Me.btnShowMK.Name = "btnShowMK"
-        Me.btnShowMK.Size = New System.Drawing.Size(151, 148)
-        Me.btnShowMK.TabIndex = 10
-        Me.btnShowMK.Text = "Lihat MK"
-        Me.btnShowMK.UseVisualStyleBackColor = True
         '
         'btnShowMahasiswa
         '
@@ -65,6 +56,15 @@ Partial Class dashboardDsn
         Me.lblWelcome.TabIndex = 7
         Me.lblWelcome.Text = "Welcome , 春宮さ"
         '
+        'btnShowMK
+        '
+        Me.btnShowMK.Location = New System.Drawing.Point(484, 156)
+        Me.btnShowMK.Name = "btnShowMK"
+        Me.btnShowMK.Size = New System.Drawing.Size(151, 148)
+        Me.btnShowMK.TabIndex = 10
+        Me.btnShowMK.Text = "Lihat MK"
+        Me.btnShowMK.UseVisualStyleBackColor = True
+        '
         'dashboardDsn
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -81,9 +81,8 @@ Partial Class dashboardDsn
         Me.PerformLayout()
 
     End Sub
-
-    Friend WithEvents btnShowMK As Button
     Friend WithEvents btnShowMahasiswa As Button
     Friend WithEvents btnLogout As Button
     Friend WithEvents lblWelcome As Label
+    Friend WithEvents btnShowMK As Button
 End Class

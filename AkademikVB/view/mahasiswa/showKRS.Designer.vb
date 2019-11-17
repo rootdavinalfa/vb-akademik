@@ -23,8 +23,8 @@ Partial Class showKRS
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.lblSmtKelompok = New System.Windows.Forms.Label()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.krsDGV = New System.Windows.Forms.DataGridView()
+        CType(Me.krsDGV, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'lblSmtKelompok
@@ -37,30 +37,30 @@ Partial Class showKRS
         Me.lblSmtKelompok.TabIndex = 0
         Me.lblSmtKelompok.Text = "Semester 1 @ Kelompok : 1"
         '
-        'DataGridView1
+        'krsDGV
         '
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(21, 80)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(767, 358)
-        Me.DataGridView1.TabIndex = 1
+        Me.krsDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.krsDGV.Location = New System.Drawing.Point(21, 80)
+        Me.krsDGV.Name = "krsDGV"
+        Me.krsDGV.Size = New System.Drawing.Size(767, 358)
+        Me.krsDGV.TabIndex = 1
         '
         'showKRS
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
-        Me.Controls.Add(Me.DataGridView1)
+        Me.Controls.Add(Me.krsDGV)
         Me.Controls.Add(Me.lblSmtKelompok)
         Me.MaximizeBox = False
         Me.Name = "showKRS"
         Me.Text = "Lihat KRS"
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.krsDGV, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
 
     Friend WithEvents lblSmtKelompok As Label
-    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents krsDGV As DataGridView
 End Class

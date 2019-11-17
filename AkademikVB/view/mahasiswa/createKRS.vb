@@ -1,8 +1,9 @@
 ﻿Public Class createKRS
     Public datas As userdata
     Private con As OleDb.OleDbConnection
-    Private ds As New DataSet
+    Private ds As DataSet
     Private Sub CreateKRS_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        ds = New DataSet
         con = connect()
         lblKrsInfo.Text = String.Format("Semester {0}  @ Kelompok {1}", datas.Semester, datas.Kelompok)
         dgvAvail.Rows.Clear()
@@ -10,7 +11,7 @@
         dgvPicked.Rows.Clear()
         dgvPicked.Columns.Clear()
         initDGV()
-        If isKRSAvailable() Then
+        If dashboardMhs.isKRSAvailable() Then
             MessageBox.Show("Anda sudah membuat KRS! Tidak dapat membuat KRS kembali")
             Me.Close()
         Else
@@ -18,7 +19,7 @@
                 dgvAvail.Enabled = False
                 initReq()
             Else
-                initialize()
+                initKrs()
             End If
         End If
     End Sub
@@ -58,7 +59,7 @@
         End Try
     End Sub
 
-    Private Sub initialize()
+    Private Sub initKrs()
         ds.Clear()
         Try
             Dim Sqls = "SELECT pengajar.kelompok, matakuliahList.MataKuliah, dosenList.Nama, pengajar.idMK, pengajar.dosen, pengajar.idPengajar
@@ -101,7 +102,7 @@
     Private Sub BtnRefresh_Click(sender As Object, e As EventArgs) Handles btnRefresh.Click
         dgvAvail.Rows.Clear()
         ds.Clear()
-        initialize()
+        initKrs()
     End Sub
 
     Private Sub BtnApplyKrs_Click(sender As Object, e As EventArgs) Handles btnApplyKrs.Click
@@ -134,26 +135,7 @@
 
     End Sub
 
-    Private Function isKRSAvailable() As Boolean
-        Try
-            Dim sqls = "SELECT krs.mahasiswa, krs.status, krs.semester
-                        FROM krs
-                        WHERE (((krs.mahasiswa)=@1) AND ((krs.status)='ACC') AND ((krs.semester)=@2));
-                    "
-            Dim ole As OleDb.OleDbCommand = con.CreateCommand
-            ole.CommandText = sqls
-            ole.Parameters.Add(New OleDb.OleDbParameter("@1", datas.ID))
-            ole.Parameters.Add(New OleDb.OleDbParameter("@2", datas.Semester))
-            Dim reader = ole.ExecuteReader
-            If reader.Read Then
-                Return True
-            End If
-        Catch ex As Exception
-            MessageBox.Show(ex.Message)
-        End Try
 
-        Return False
-    End Function
 
     Private Function isReqAvailable() As Boolean
         Try

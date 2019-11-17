@@ -1,4 +1,7 @@
-﻿Public Class loginScreen
+﻿'２０１９年　Davin Alfarizky Putra Basudewa　がこのプロガムを作ってみました
+'忘れればのコードには私を連絡してください。
+
+Public Class loginScreen
     Dim con As OleDb.OleDbConnection
     Private Sub BtnLogin_Click(sender As Object, e As EventArgs) Handles btnLogin.Click
         Try

@@ -1,4 +1,5 @@
 ﻿Public Class dashboardMhs
+    Private con As OleDb.OleDbConnection
     Public users As userdata
     Private Sub DashboardMhs_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         initialize()
@@ -6,7 +7,7 @@
 
     Private Sub initialize()
         Try
-            Dim con = connect()
+            con = connect()
             Dim Sql = "SELECT jurusanList.NamaJurusan, fakultasList.NamaFakultas, mahasiswaList.Nama, mahasiswaList.Semester, mahasiswaList.Kelompok, mahasiswaList.Fakultas, mahasiswaList.Jurusan
                     FROM (fakultasList INNER JOIN jurusanList ON fakultasList.idFakultas = jurusanList.idFakultas) INNER JOIN mahasiswaList ON (jurusanList.idJurusan = mahasiswaList.Jurusan) AND (fakultasList.idFakultas = mahasiswaList.Fakultas)
                     WHERE (((mahasiswaList.NIM)=@1));
@@ -43,6 +44,7 @@
     End Sub
 
     Private Sub BtnShowKRS_Click(sender As Object, e As EventArgs) Handles btnShowKRS.Click
+        showKRS.datas = users
         showKRS.ShowDialog()
     End Sub
 
@@ -50,4 +52,27 @@
         createKRS.datas = users
         createKRS.ShowDialog()
     End Sub
+
+
+    'PUBLIC
+    Public Function isKRSAvailable() As Boolean
+        Try
+            Dim sqls = "SELECT krs.mahasiswa, krs.status, krs.semester
+                        FROM krs
+                        WHERE (((krs.mahasiswa)=@1) AND ((krs.status)='ACC') AND ((krs.semester)=@2));
+                    "
+            Dim ole As OleDb.OleDbCommand = con.CreateCommand
+            ole.CommandText = sqls
+            ole.Parameters.Add(New OleDb.OleDbParameter("@1", users.ID))
+            ole.Parameters.Add(New OleDb.OleDbParameter("@2", users.Semester))
+            Dim reader = ole.ExecuteReader
+            If reader.Read Then
+                Return True
+            End If
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
+
+        Return False
+    End Function
 End Class

@@ -1,9 +1,10 @@
 ﻿Module dbs
     Public Function connect() As OleDb.OleDbConnection
         Try
-            Dim con As OleDb.OleDbConnection = New OleDb.OleDbConnection
-            con.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=.\akademik.accdb;
+            Dim con As OleDb.OleDbConnection = New OleDb.OleDbConnection With {
+                .ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=.\akademik.accdb;
 Persist Security Info=False;"
+            }
             con.Open()
             Return con
 
