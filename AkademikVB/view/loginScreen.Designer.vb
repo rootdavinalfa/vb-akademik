@@ -135,6 +135,7 @@ Partial Class loginScreen
         Me.Controls.Add(Me.Label1)
         Me.MaximizeBox = False
         Me.Name = "loginScreen"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Login"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()

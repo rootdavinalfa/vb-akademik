@@ -8,15 +8,21 @@ Public Class loginScreen
             Dim isMhs = True
             Dim ole As OleDb.OleDbCommand = con.CreateCommand
 
-            If rbMhs.Checked Then
-                ole.CommandText = "SELECT * FROM userLoginMahasiswa WHERE ID = @1 AND password = @2 "
-            ElseIf rbDsn.Checked Then
-                isMhs = False
-                ole.CommandText = "SELECT * FROM userLoginDosen WHERE ID = @1 AND password = @2 "
-            End If
-
             Dim user = userText.Text
             Dim password = passwordText.Text
+
+            If rbMhs.Checked And Not user.Contains("admin") Then
+                ole.CommandText = "SELECT * FROM userLoginMahasiswa WHERE ID = @1 AND password = @2 "
+            ElseIf rbDsn.Checked And Not user.Contains("admin") Then
+                isMhs = False
+                ole.CommandText = "SELECT * FROM userLoginDosen WHERE ID = @1 AND password = @2 "
+            ElseIf user.Contains("admin") Then
+                admindashboard.ShowDialog()
+
+            End If
+
+
+
 
             ole.Parameters.Add(New OleDb.OleDbParameter("@1", user))
             ole.Parameters.Add(New OleDb.OleDbParameter("@2", password))
@@ -47,5 +53,9 @@ Public Class loginScreen
 
     Private Sub LoginScreen_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         con = connect()
+    End Sub
+
+    Private Sub GroupBox1_Enter(sender As Object, e As EventArgs) Handles GroupBox1.Enter
+
     End Sub
 End Class
