@@ -97,6 +97,12 @@
   <ItemGroup>
     <Compile Include="libs\dbs.vb" />
     <Compile Include="model\userdata.vb" />
+    <Compile Include="view\admin\dashboardAdmin.Designer.vb">
+      <DependentUpon>dashboardAdmin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="view\admin\dashboardAdmin.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="view\dosen\dashboardDsn.Designer.vb">
       <DependentUpon>dashboardDsn.vb</DependentUpon>
     </Compile>
@@ -157,6 +163,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="view\admin\dashboardAdmin.resx">
+      <DependentUpon>dashboardAdmin.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="view\dosen\dashboardDsn.resx">
       <DependentUpon>dashboardDsn.vb</DependentUpon>
     </EmbeddedResource>

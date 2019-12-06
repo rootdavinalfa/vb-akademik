@@ -1,4 +1,6 @@
-﻿Public Class showKRS
+﻿'２０１９年　Davin Alfarizky Putra Basudewa,Syahrul Febrianto　がこのプロガムを作ってみました
+'忘れればのコードには私たちを連絡してください。
+Public Class showKRS
     Public datas As userdata
     Private con As OleDb.OleDbConnection
     Private ds As New DataSet

@@ -1,5 +1,5 @@
-﻿'２０１９年　Davin Alfarizky Putra Basudewa　がこのプロガムを作ってみました
-'忘れればのコードには私を連絡してください。
+﻿'２０１９年　Davin Alfarizky Putra Basudewa,Syahrul Febrianto　がこのプロガムを作ってみました
+'忘れればのコードには私たちを連絡してください。
 
 Public Class loginScreen
     Dim con As OleDb.OleDbConnection
@@ -7,16 +7,19 @@ Public Class loginScreen
         Try
             Dim isMhs = True
             Dim ole As OleDb.OleDbCommand = con.CreateCommand
-
-            If rbMhs.Checked Then
-                ole.CommandText = "SELECT * FROM userLoginMahasiswa WHERE ID = @1 AND password = @2 "
-            ElseIf rbDsn.Checked Then
-                isMhs = False
-                ole.CommandText = "SELECT * FROM userLoginDosen WHERE ID = @1 AND password = @2 "
-            End If
-
             Dim user = userText.Text
             Dim password = passwordText.Text
+
+            If rbMhs.Checked And Not user.Contains("admin") Then
+                ole.CommandText = "SELECT * FROM userLoginMahasiswa WHERE ID = @1 AND password = @2 "
+            ElseIf rbDsn.Checked And Not user.Contains("admin") Then
+                isMhs = False
+                ole.CommandText = "SELECT * FROM userLoginDosen WHERE ID = @1 AND password = @2 "
+            ElseIf user.Contains("admin") Then
+                MsgBox("ADMIN!")
+            End If
+
+
 
             ole.Parameters.Add(New OleDb.OleDbParameter("@1", user))
             ole.Parameters.Add(New OleDb.OleDbParameter("@2", password))
