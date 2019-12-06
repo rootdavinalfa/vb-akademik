@@ -42,5 +42,7 @@
         dgvMKNgajar.Columns.Add("ckelompok", "Jurusan")
     End Sub
 
+    Private Sub dgvMKNgajar_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvMKNgajar.CellContentClick
 
+    End Sub
 End Class
