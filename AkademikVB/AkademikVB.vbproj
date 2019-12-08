@@ -218,6 +218,9 @@
     <EmbeddedResource Include="view\admin\dashboardAdmin.resx">
       <DependentUpon>dashboardAdmin.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="view\admin\dosen\dosenBay.resx">
+      <DependentUpon>dosenBay.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="view\admin\mahasiswa\listKelas.resx">
       <DependentUpon>listKelas.vb</DependentUpon>
     </EmbeddedResource>
