@@ -161,7 +161,7 @@
     Private Sub btnGenerateNim_Click(sender As Object, e As EventArgs) Handles btnGenerateNim.Click
         Dim Generator As System.Random = New System.Random()
         Dim lastYear = DateTime.Now.ToString("yy")
-        Dim indexx = GetRandom(Generator, 1, 1000)
+        Dim indexx = GetRandom(Generator, 1, 999)
         Dim generateNim = String.Format("0{0}0{1}{2}{3}2", inputFakultas.SelectedValue, inputProdi.SelectedValue, lastYear, indexx)
         lblNim.Text = generateNim
     End Sub

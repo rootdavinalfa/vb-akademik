@@ -149,6 +149,12 @@
     <Compile Include="view\admin\mk\mkBay.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="view\admin\mk\pengajar.Designer.vb">
+      <DependentUpon>pengajar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="view\admin\mk\pengajar.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="view\dosen\dashboardDsn.Designer.vb">
       <DependentUpon>dashboardDsn.vb</DependentUpon>
     </Compile>
@@ -220,6 +226,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="view\admin\mahasiswa\mahasiswaBay.resx">
       <DependentUpon>mahasiswaBay.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\admin\mk\mkBay.resx">
+      <DependentUpon>mkBay.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\admin\mk\pengajar.resx">
+      <DependentUpon>pengajar.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="view\dosen\dashboardDsn.resx">
       <DependentUpon>dashboardDsn.vb</DependentUpon>
