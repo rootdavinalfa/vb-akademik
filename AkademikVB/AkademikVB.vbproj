@@ -131,6 +131,12 @@
     <Compile Include="view\admin\mahasiswa\listKelas.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="view\admin\mahasiswa\listKelompok.Designer.vb">
+      <DependentUpon>listKelompok.vb</DependentUpon>
+    </Compile>
+    <Compile Include="view\admin\mahasiswa\listKelompok.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="view\admin\mahasiswa\mahasiswaBay.Designer.vb">
       <DependentUpon>mahasiswaBay.vb</DependentUpon>
     </Compile>
@@ -205,6 +211,12 @@
   <ItemGroup>
     <EmbeddedResource Include="view\admin\dashboardAdmin.resx">
       <DependentUpon>dashboardAdmin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\admin\mahasiswa\listKelas.resx">
+      <DependentUpon>listKelas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\admin\mahasiswa\listKelompok.resx">
+      <DependentUpon>listKelompok.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="view\admin\mahasiswa\mahasiswaBay.resx">
       <DependentUpon>mahasiswaBay.vb</DependentUpon>

@@ -119,7 +119,7 @@
     End Sub
 
     Private Sub btnKelas_Click(sender As Object, e As EventArgs) Handles btnKelas.Click
-        listKelas.ShowDialog()
+        listKelompok.ShowDialog()
     End Sub
     Private Sub initDGV()
         dgvListMahasiswa.Rows.Clear()

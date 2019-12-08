@@ -30,6 +30,8 @@ Partial Class mahasiswaBay
         Me.listProdi = New System.Windows.Forms.ComboBox()
         Me.listFakultas = New System.Windows.Forms.ComboBox()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.btnGenerateNim = New System.Windows.Forms.Button()
         Me.inputNama = New System.Windows.Forms.TextBox()
         Me.inputProdi = New System.Windows.Forms.ComboBox()
         Me.inputFakultas = New System.Windows.Forms.ComboBox()
@@ -39,8 +41,6 @@ Partial Class mahasiswaBay
         Me.Label4 = New System.Windows.Forms.Label()
         Me.btnCreate = New System.Windows.Forms.Button()
         Me.btnKelas = New System.Windows.Forms.Button()
-        Me.btnGenerateNim = New System.Windows.Forms.Button()
-        Me.Label3 = New System.Windows.Forms.Label()
         Me.GroupBox1.SuspendLayout()
         CType(Me.dgvListMahasiswa, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox2.SuspendLayout()
@@ -101,7 +101,7 @@ Partial Class mahasiswaBay
         Me.listProdi.FormattingEnabled = True
         Me.listProdi.Location = New System.Drawing.Point(265, 23)
         Me.listProdi.Name = "listProdi"
-        Me.listProdi.Size = New System.Drawing.Size(121, 21)
+        Me.listProdi.Size = New System.Drawing.Size(204, 21)
         Me.listProdi.TabIndex = 1
         '
         'listFakultas
@@ -109,7 +109,7 @@ Partial Class mahasiswaBay
         Me.listFakultas.FormattingEnabled = True
         Me.listFakultas.Location = New System.Drawing.Point(60, 23)
         Me.listFakultas.Name = "listFakultas"
-        Me.listFakultas.Size = New System.Drawing.Size(149, 21)
+        Me.listFakultas.Size = New System.Drawing.Size(162, 21)
         Me.listFakultas.TabIndex = 0
         '
         'GroupBox2
@@ -130,6 +130,25 @@ Partial Class mahasiswaBay
         Me.GroupBox2.TabIndex = 1
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Mahasiswa Baru"
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(551, 64)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(46, 20)
+        Me.Label3.TabIndex = 16
+        Me.Label3.Text = "NIM :"
+        '
+        'btnGenerateNim
+        '
+        Me.btnGenerateNim.Location = New System.Drawing.Point(560, 27)
+        Me.btnGenerateNim.Name = "btnGenerateNim"
+        Me.btnGenerateNim.Size = New System.Drawing.Size(104, 23)
+        Me.btnGenerateNim.TabIndex = 15
+        Me.btnGenerateNim.Text = "Generate NIM"
+        Me.btnGenerateNim.UseVisualStyleBackColor = True
         '
         'inputNama
         '
@@ -158,11 +177,12 @@ Partial Class mahasiswaBay
         '
         Me.lblNim.AutoSize = True
         Me.lblNim.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblNim.ForeColor = System.Drawing.Color.Red
         Me.lblNim.Location = New System.Drawing.Point(603, 64)
         Me.lblNim.Name = "lblNim"
-        Me.lblNim.Size = New System.Drawing.Size(46, 20)
+        Me.lblNim.Size = New System.Drawing.Size(90, 20)
         Me.lblNim.TabIndex = 12
-        Me.lblNim.Text = "NIM :"
+        Me.lblNim.Text = "%%nim%%"
         '
         'Label6
         '
@@ -208,25 +228,6 @@ Partial Class mahasiswaBay
         Me.btnKelas.TabIndex = 15
         Me.btnKelas.Text = "Buat dan Lihat Kelas Mahasiswa"
         Me.btnKelas.UseVisualStyleBackColor = True
-        '
-        'btnGenerateNim
-        '
-        Me.btnGenerateNim.Location = New System.Drawing.Point(560, 27)
-        Me.btnGenerateNim.Name = "btnGenerateNim"
-        Me.btnGenerateNim.Size = New System.Drawing.Size(104, 23)
-        Me.btnGenerateNim.TabIndex = 15
-        Me.btnGenerateNim.Text = "Generate NIM"
-        Me.btnGenerateNim.UseVisualStyleBackColor = True
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(551, 64)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(46, 20)
-        Me.Label3.TabIndex = 16
-        Me.Label3.Text = "NIM :"
         '
         'mahasiswaBay
         '
