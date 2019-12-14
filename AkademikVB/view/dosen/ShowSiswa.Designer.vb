@@ -63,6 +63,7 @@ Partial Class ShowSiswa
         Me.Controls.Add(Me.pickMK)
         Me.MaximizeBox = False
         Me.Name = "ShowSiswa"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Lihat Siswa"
         CType(Me.dgvSiswa, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)

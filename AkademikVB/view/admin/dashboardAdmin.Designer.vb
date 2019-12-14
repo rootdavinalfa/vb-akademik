@@ -86,6 +86,7 @@ Partial Class dashboardAdmin
         Me.Controls.Add(Me.btnLogout)
         Me.Controls.Add(Me.lblWelcome)
         Me.Name = "dashboardAdmin"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Admin Dashboard"
         Me.ResumeLayout(False)
         Me.PerformLayout()

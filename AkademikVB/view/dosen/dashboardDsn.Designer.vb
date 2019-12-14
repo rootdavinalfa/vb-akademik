@@ -76,6 +76,7 @@ Partial Class dashboardDsn
         Me.Controls.Add(Me.lblWelcome)
         Me.MaximizeBox = False
         Me.Name = "dashboardDsn"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Dashboard Dosen"
         Me.ResumeLayout(False)
         Me.PerformLayout()

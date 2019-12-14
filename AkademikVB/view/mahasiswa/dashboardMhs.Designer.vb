@@ -100,6 +100,7 @@ Partial Class dashboardMhs
         Me.Controls.Add(Me.lblWelcome)
         Me.MaximizeBox = False
         Me.Name = "dashboardMhs"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Dashboard Mahasiswa"
         Me.ResumeLayout(False)
         Me.PerformLayout()

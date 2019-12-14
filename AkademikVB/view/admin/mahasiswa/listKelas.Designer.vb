@@ -231,6 +231,7 @@ Partial Class listKelas
         Me.Controls.Add(Me.dgvKelas)
         Me.Controls.Add(Me.Label1)
         Me.Name = "listKelas"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "listKelas"
         CType(Me.dgvKelas, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.dgvMhs, System.ComponentModel.ISupportInitialize).EndInit()

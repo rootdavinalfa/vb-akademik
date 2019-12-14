@@ -54,6 +54,7 @@ Partial Class showKRS
         Me.Controls.Add(Me.lblSmtKelompok)
         Me.MaximizeBox = False
         Me.Name = "showKRS"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Lihat KRS"
         CType(Me.krsDGV, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)

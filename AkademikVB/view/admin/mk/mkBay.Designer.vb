@@ -46,6 +46,7 @@ Partial Class mkBay
         Me.lblIDMK = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.btnPengajar = New System.Windows.Forms.Button()
+        Me.btnUpdate = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         CType(Me.dgvMKList, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -56,6 +57,7 @@ Partial Class mkBay
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.btnUpdate)
         Me.GroupBox1.Controls.Add(Me.btnRefresh)
         Me.GroupBox1.Controls.Add(Me.listProdi)
         Me.GroupBox1.Controls.Add(Me.listFakultas)
@@ -284,6 +286,15 @@ Partial Class mkBay
         Me.btnPengajar.Text = "Buat dan Lihat Pengajar"
         Me.btnPengajar.UseVisualStyleBackColor = True
         '
+        'btnUpdate
+        '
+        Me.btnUpdate.Location = New System.Drawing.Point(600, 15)
+        Me.btnUpdate.Name = "btnUpdate"
+        Me.btnUpdate.Size = New System.Drawing.Size(75, 23)
+        Me.btnUpdate.TabIndex = 5
+        Me.btnUpdate.Text = "Update"
+        Me.btnUpdate.UseVisualStyleBackColor = True
+        '
         'mkBay
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -332,4 +343,5 @@ Partial Class mkBay
     Friend WithEvents btnCreate As Button
     Friend WithEvents btnGenerate As Button
     Friend WithEvents btnPengajar As Button
+    Friend WithEvents btnUpdate As Button
 End Class

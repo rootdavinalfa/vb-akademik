@@ -131,6 +131,7 @@
 
     Private Sub btnRefresh_Click(sender As Object, e As EventArgs) Handles btnRefresh.Click
         Try
+
             initDGV()
             Dim dss = New DataSet
             Dim sql = "SELECT fakultasList.idFakultas, jurusanList.idJurusan, mahasiswaList.NIM, mahasiswaList.Nama, mahasiswaList.Semester
@@ -198,6 +199,34 @@
             MessageBox.Show("Data Created!")
         Catch ex As Exception
             MessageBox.Show(ex.Message)
+        End Try
+    End Sub
+
+    Private Sub GroupBox1_Enter(sender As Object, e As EventArgs) Handles GroupBox1.Enter
+
+    End Sub
+
+    Private Sub btnUpdate_Click(sender As Object, e As EventArgs) Handles btnUpdate.Click
+        Try
+            For Each dgr As DataGridViewRow In dgvListMahasiswa.Rows
+                If Not dgr.IsNewRow Then
+                    'This query is fast fix bug for 1909 Office 2016 Access bug.Please consider to changing back
+                    'to default query when bugs is fixed
+                    Dim sql = "UPDATE (SELECT * FROM mahasiswaList) SET Semester = @1, Nama = @2 WHERE (NIM = @3);"
+                    Dim ole = con.CreateCommand()
+                    ole.CommandText = sql
+                    ole.Parameters.Add(New OleDb.OleDbParameter("@1", Convert.ToInt32(dgr.Cells(2).Value)))
+                    ole.Parameters.Add(New OleDb.OleDbParameter("@2", dgr.Cells(1).Value.ToString))
+                    ole.Parameters.Add(New OleDb.OleDbParameter("@3", dgr.Cells(0).Value.ToString))
+                    ole.ExecuteNonQuery()
+                    'Console.WriteLine(dgr.Cells(0).Value.ToString + "::" + dgr.Cells(1).Value.ToString + "::" + dgr.Cells(2).Value.ToString)
+                End If
+
+
+            Next
+            MessageBox.Show("Data Updated!")
+        Catch ex As Exception
+            MessageBox.Show("Data Belum di Update")
         End Try
     End Sub
 End Class

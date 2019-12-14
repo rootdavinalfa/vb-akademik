@@ -54,6 +54,7 @@ Partial Class ShowNgajar
         Me.Controls.Add(Me.dgvMKNgajar)
         Me.MaximizeBox = False
         Me.Name = "ShowNgajar"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Mengajar Apa Saya?"
         CType(Me.dgvMKNgajar, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)

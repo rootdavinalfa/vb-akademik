@@ -134,4 +134,23 @@
             MessageBox.Show(ex.Message)
         End Try
     End Sub
+
+    Private Sub btnUpdate_Click(sender As Object, e As EventArgs) Handles btnUpdate.Click
+        Try
+            For Each dgr As DataGridViewRow In dgvDosen.Rows
+                If Not dgr.IsNewRow Then
+                    Dim sql = "UPDATE (SELECT * FROM dosenList) SET Nama = @1 WHERE (NID = @2);"
+                    Dim ole = con.CreateCommand()
+                    ole.CommandText = sql
+                    ole.Parameters.Add(New OleDb.OleDbParameter("@1", dgr.Cells(1).Value.ToString))
+                    ole.Parameters.Add(New OleDb.OleDbParameter("@2", dgr.Cells(0).Value.ToString))
+                    ole.ExecuteReader()
+                End If
+
+            Next
+            MsgBox("Data Updated")
+        Catch ex As Exception
+            MsgBox("Terjadi Kesalahan")
+        End Try
+    End Sub
 End Class

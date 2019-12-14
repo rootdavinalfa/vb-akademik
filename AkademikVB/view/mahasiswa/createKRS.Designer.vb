@@ -111,6 +111,7 @@ Partial Class createKRS
         Me.Controls.Add(Me.lblKrsInfo)
         Me.MaximizeBox = False
         Me.Name = "createKRS"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Mari buat KRS!"
         CType(Me.dgvAvail, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.dgvPicked, System.ComponentModel.ISupportInitialize).EndInit()

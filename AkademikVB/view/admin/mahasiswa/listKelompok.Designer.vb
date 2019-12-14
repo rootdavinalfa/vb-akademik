@@ -101,6 +101,7 @@ Partial Class listKelompok
         Me.Controls.Add(Me.dgvMhs)
         Me.Controls.Add(Me.btnRefresh)
         Me.Name = "listKelompok"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "listKelompok"
         CType(Me.dgvMhs, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox1.ResumeLayout(False)

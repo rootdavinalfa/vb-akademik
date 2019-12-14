@@ -219,4 +219,26 @@
     Private Sub btnPengajar_Click(sender As Object, e As EventArgs) Handles btnPengajar.Click
         pengajar.ShowDialog()
     End Sub
+
+    Private Sub btnUpdate_Click(sender As Object, e As EventArgs) Handles btnUpdate.Click
+        Try
+            For Each dgr As DataGridViewRow In dgvMKList.Rows
+                If Not dgr.IsNewRow Then
+                    Dim sql = "UPDATE (SELECT * FROM matakuliahList) SET MataKuliah = @1, Semester = @2 WHERE (idMataKuliah = @3);"
+                    Dim ole = con.CreateCommand()
+                    ole.CommandText = sql
+                    ole.Parameters.Add(New OleDb.OleDbParameter("@1", dgr.Cells(1).Value.ToString))
+                    ole.Parameters.Add(New OleDb.OleDbParameter("@2", dgr.Cells(2).Value.ToString))
+                    ole.Parameters.Add(New OleDb.OleDbParameter("@3", dgr.Cells(0).Value.ToString))
+                    ole.ExecuteNonQuery()
+                    'Console.WriteLine(dgr.Cells(0).Value.ToString + "::" + dgr.Cells(1).Value.ToString + "::" + dgr.Cells(2).Value.ToString)
+                End If
+
+
+            Next
+            MessageBox.Show("Data Updated!")
+        Catch ex As Exception
+            MessageBox.Show("Terjadi Kesalahan")
+        End Try
+    End Sub
 End Class

@@ -23,6 +23,7 @@ Partial Class mahasiswaBay
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.btnUpdate = New System.Windows.Forms.Button()
         Me.btnRefresh = New System.Windows.Forms.Button()
         Me.dgvListMahasiswa = New System.Windows.Forms.DataGridView()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -48,6 +49,7 @@ Partial Class mahasiswaBay
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.btnUpdate)
         Me.GroupBox1.Controls.Add(Me.btnRefresh)
         Me.GroupBox1.Controls.Add(Me.dgvListMahasiswa)
         Me.GroupBox1.Controls.Add(Me.Label2)
@@ -60,6 +62,15 @@ Partial Class mahasiswaBay
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "List Mahasiswa"
+        '
+        'btnUpdate
+        '
+        Me.btnUpdate.Location = New System.Drawing.Point(607, 19)
+        Me.btnUpdate.Name = "btnUpdate"
+        Me.btnUpdate.Size = New System.Drawing.Size(75, 23)
+        Me.btnUpdate.TabIndex = 17
+        Me.btnUpdate.Text = "Update"
+        Me.btnUpdate.UseVisualStyleBackColor = True
         '
         'btnRefresh
         '
@@ -238,6 +249,7 @@ Partial Class mahasiswaBay
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
         Me.Name = "mahasiswaBay"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "mahasiswaBay"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
@@ -267,4 +279,5 @@ Partial Class mahasiswaBay
     Friend WithEvents btnKelas As Button
     Friend WithEvents btnGenerateNim As Button
     Friend WithEvents Label3 As Label
+    Friend WithEvents btnUpdate As Button
 End Class
