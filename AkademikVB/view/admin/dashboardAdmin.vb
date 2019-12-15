@@ -46,4 +46,8 @@
     Private Sub btnDosen_Click(sender As Object, e As EventArgs) Handles btnDosen.Click
         dosenBay.ShowDialog()
     End Sub
+
+    Private Sub btnKRS_Click(sender As Object, e As EventArgs) Handles btnKRS.Click
+        krsBay.ShowDialog()
+    End Sub
 End Class

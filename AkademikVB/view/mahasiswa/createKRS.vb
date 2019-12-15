@@ -131,6 +131,7 @@ Public Class createKRS
                     Console.WriteLine(ex.Message)
                 End Try
             Next
+            MsgBox("Berhasil membuat KRS!")
             dgvAvail.Rows.Clear()
             dgvAvail.Columns.Clear()
         Else

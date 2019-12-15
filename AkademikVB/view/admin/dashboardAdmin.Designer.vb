@@ -27,6 +27,7 @@ Partial Class dashboardAdmin
         Me.btnMhs = New System.Windows.Forms.Button()
         Me.btnMK = New System.Windows.Forms.Button()
         Me.btnDosen = New System.Windows.Forms.Button()
+        Me.btnKRS = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'lblWelcome
@@ -50,7 +51,7 @@ Partial Class dashboardAdmin
         '
         'btnMhs
         '
-        Me.btnMhs.Location = New System.Drawing.Point(41, 128)
+        Me.btnMhs.Location = New System.Drawing.Point(17, 128)
         Me.btnMhs.Name = "btnMhs"
         Me.btnMhs.Size = New System.Drawing.Size(141, 103)
         Me.btnMhs.TabIndex = 2
@@ -59,7 +60,7 @@ Partial Class dashboardAdmin
         '
         'btnMK
         '
-        Me.btnMK.Location = New System.Drawing.Point(233, 128)
+        Me.btnMK.Location = New System.Drawing.Point(164, 128)
         Me.btnMK.Name = "btnMK"
         Me.btnMK.Size = New System.Drawing.Size(141, 103)
         Me.btnMK.TabIndex = 3
@@ -68,18 +69,28 @@ Partial Class dashboardAdmin
         '
         'btnDosen
         '
-        Me.btnDosen.Location = New System.Drawing.Point(428, 128)
+        Me.btnDosen.Location = New System.Drawing.Point(311, 128)
         Me.btnDosen.Name = "btnDosen"
         Me.btnDosen.Size = New System.Drawing.Size(141, 103)
         Me.btnDosen.TabIndex = 4
         Me.btnDosen.Text = "Dosen"
         Me.btnDosen.UseVisualStyleBackColor = True
         '
+        'btnKRS
+        '
+        Me.btnKRS.Location = New System.Drawing.Point(458, 128)
+        Me.btnKRS.Name = "btnKRS"
+        Me.btnKRS.Size = New System.Drawing.Size(141, 103)
+        Me.btnKRS.TabIndex = 5
+        Me.btnKRS.Text = "KRS"
+        Me.btnKRS.UseVisualStyleBackColor = True
+        '
         'dashboardAdmin
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(627, 258)
+        Me.Controls.Add(Me.btnKRS)
         Me.Controls.Add(Me.btnDosen)
         Me.Controls.Add(Me.btnMK)
         Me.Controls.Add(Me.btnMhs)
@@ -98,4 +109,5 @@ Partial Class dashboardAdmin
     Friend WithEvents btnMhs As Button
     Friend WithEvents btnMK As Button
     Friend WithEvents btnDosen As Button
+    Friend WithEvents btnKRS As Button
 End Class

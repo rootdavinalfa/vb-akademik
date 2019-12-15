@@ -84,6 +84,9 @@
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
     <Prefer32Bit>true</Prefer32Bit>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>planets.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -125,10 +128,10 @@
     <Compile Include="view\admin\dosen\dosenBay.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="view\admin\mahasiswa\listKelas.Designer.vb">
-      <DependentUpon>listKelas.vb</DependentUpon>
+    <Compile Include="view\admin\krs\krsBay.Designer.vb">
+      <DependentUpon>krsBay.vb</DependentUpon>
     </Compile>
-    <Compile Include="view\admin\mahasiswa\listKelas.vb">
+    <Compile Include="view\admin\krs\krsBay.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="view\admin\mahasiswa\listKelompok.Designer.vb">
@@ -221,8 +224,8 @@
     <EmbeddedResource Include="view\admin\dosen\dosenBay.resx">
       <DependentUpon>dosenBay.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="view\admin\mahasiswa\listKelas.resx">
-      <DependentUpon>listKelas.vb</DependentUpon>
+    <EmbeddedResource Include="view\admin\krs\krsBay.resx">
+      <DependentUpon>krsBay.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="view\admin\mahasiswa\listKelompok.resx">
       <DependentUpon>listKelompok.vb</DependentUpon>
@@ -276,7 +279,9 @@
     </None>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="planets.ico" />
+  </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
       <Visible>False</Visible>
