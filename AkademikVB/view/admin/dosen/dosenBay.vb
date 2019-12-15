@@ -90,6 +90,7 @@
 
                 dgvDosen.Rows.Add(nid, nama)
             Next
+            dgvDosen.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
         Catch ex As Exception
             MsgBox(ex.Message)
         End Try

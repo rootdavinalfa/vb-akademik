@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class dashboardMhs
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class dashboardMhs
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.lblWelcome = New System.Windows.Forms.Label()
         Me.btnLogout = New System.Windows.Forms.Button()
@@ -43,7 +43,7 @@ Partial Class dashboardMhs
         '
         'btnLogout
         '
-        Me.btnLogout.Location = New System.Drawing.Point(713, 13)
+        Me.btnLogout.Location = New System.Drawing.Point(547, 13)
         Me.btnLogout.Name = "btnLogout"
         Me.btnLogout.Size = New System.Drawing.Size(75, 23)
         Me.btnLogout.TabIndex = 2
@@ -52,18 +52,18 @@ Partial Class dashboardMhs
         '
         'btnShowKRS
         '
-        Me.btnShowKRS.Location = New System.Drawing.Point(484, 154)
+        Me.btnShowKRS.Location = New System.Drawing.Point(346, 154)
         Me.btnShowKRS.Name = "btnShowKRS"
-        Me.btnShowKRS.Size = New System.Drawing.Size(151, 148)
+        Me.btnShowKRS.Size = New System.Drawing.Size(111, 74)
         Me.btnShowKRS.TabIndex = 6
         Me.btnShowKRS.Text = "Lihat KRS"
         Me.btnShowKRS.UseVisualStyleBackColor = True
         '
         'btnCreateKRS
         '
-        Me.btnCreateKRS.Location = New System.Drawing.Point(150, 154)
+        Me.btnCreateKRS.Location = New System.Drawing.Point(200, 154)
         Me.btnCreateKRS.Name = "btnCreateKRS"
-        Me.btnCreateKRS.Size = New System.Drawing.Size(151, 148)
+        Me.btnCreateKRS.Size = New System.Drawing.Size(114, 74)
         Me.btnCreateKRS.TabIndex = 5
         Me.btnCreateKRS.Text = "Buat KRS"
         Me.btnCreateKRS.UseVisualStyleBackColor = True
@@ -91,7 +91,7 @@ Partial Class dashboardMhs
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.ClientSize = New System.Drawing.Size(629, 248)
         Me.Controls.Add(Me.lblID)
         Me.Controls.Add(Me.lblClass)
         Me.Controls.Add(Me.btnShowKRS)

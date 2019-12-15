@@ -57,6 +57,7 @@ Public Class createKRS
 
                 dgvPicked.Rows.Add(mk, nmk, dsn)
             Next
+            dgvPicked.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
         Catch ex As Exception
             MessageBox.Show(ex.Message)
         End Try
@@ -83,6 +84,7 @@ Public Class createKRS
 
                 dgvAvail.Rows.Add(mk, nmk, dsn, kel)
             Next
+            dgvAvail.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
         Catch ex As Exception
             MessageBox.Show(ex.Message)
         End Try

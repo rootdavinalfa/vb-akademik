@@ -30,16 +30,16 @@ Partial Class dashboardDsn
         '
         'btnShowMahasiswa
         '
-        Me.btnShowMahasiswa.Location = New System.Drawing.Point(150, 156)
+        Me.btnShowMahasiswa.Location = New System.Drawing.Point(141, 117)
         Me.btnShowMahasiswa.Name = "btnShowMahasiswa"
-        Me.btnShowMahasiswa.Size = New System.Drawing.Size(151, 148)
+        Me.btnShowMahasiswa.Size = New System.Drawing.Size(153, 80)
         Me.btnShowMahasiswa.TabIndex = 9
         Me.btnShowMahasiswa.Text = "Lihat Mahasiswa"
         Me.btnShowMahasiswa.UseVisualStyleBackColor = True
         '
         'btnLogout
         '
-        Me.btnLogout.Location = New System.Drawing.Point(713, 15)
+        Me.btnLogout.Location = New System.Drawing.Point(548, 15)
         Me.btnLogout.Name = "btnLogout"
         Me.btnLogout.Size = New System.Drawing.Size(75, 23)
         Me.btnLogout.TabIndex = 8
@@ -58,9 +58,9 @@ Partial Class dashboardDsn
         '
         'btnShowMK
         '
-        Me.btnShowMK.Location = New System.Drawing.Point(484, 156)
+        Me.btnShowMK.Location = New System.Drawing.Point(381, 117)
         Me.btnShowMK.Name = "btnShowMK"
-        Me.btnShowMK.Size = New System.Drawing.Size(151, 148)
+        Me.btnShowMK.Size = New System.Drawing.Size(149, 80)
         Me.btnShowMK.TabIndex = 10
         Me.btnShowMK.Text = "Lihat MK"
         Me.btnShowMK.UseVisualStyleBackColor = True
@@ -69,7 +69,7 @@ Partial Class dashboardDsn
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.ClientSize = New System.Drawing.Size(645, 209)
         Me.Controls.Add(Me.btnShowMK)
         Me.Controls.Add(Me.btnShowMahasiswa)
         Me.Controls.Add(Me.btnLogout)

@@ -40,6 +40,8 @@ Public Class showKRS
 
                 krsDGV.Rows.Add(mk, nmk, dsn)
             Next
+            krsDGV.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
+
         Catch ex As Exception
             MessageBox.Show(ex.Message)
         End Try

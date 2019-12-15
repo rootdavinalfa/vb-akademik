@@ -29,6 +29,7 @@
                 Dim nj = ds.Tables(0).Rows(i).Item(3)
                 dgvMKNgajar.Rows.Add(idmk, nmk, nf, nj)
             Next
+            dgvMKNgajar.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
         Catch ex As Exception
             MessageBox.Show(ex.Message)
         End Try

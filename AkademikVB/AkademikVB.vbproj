@@ -113,6 +113,7 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ApplicationEvents.vb" />
     <Compile Include="libs\dbs.vb" />
     <Compile Include="libs\utility.vb" />
     <Compile Include="model\userdata.vb" />
@@ -176,6 +177,12 @@
     <Compile Include="view\dosen\ShowSiswa.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="view\loginScreen.Designer.vb">
+      <DependentUpon>loginScreen.vb</DependentUpon>
+    </Compile>
+    <Compile Include="view\loginScreen.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="view\mahasiswa\createKRS.Designer.vb">
       <DependentUpon>createKRS.vb</DependentUpon>
     </Compile>
@@ -186,13 +193,6 @@
       <DependentUpon>dashboardMhs.vb</DependentUpon>
     </Compile>
     <Compile Include="view\mahasiswa\dashboardMhs.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="view\loginScreen.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="view\loginScreen.Designer.vb">
-      <DependentUpon>loginScreen.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -214,6 +214,12 @@
       <DependentUpon>showKRS.vb</DependentUpon>
     </Compile>
     <Compile Include="view\mahasiswa\showKRS.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\splash.Designer.vb">
+      <DependentUpon>splash.vb</DependentUpon>
+    </Compile>
+    <Compile Include="view\splash.vb">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>
@@ -248,14 +254,14 @@
     <EmbeddedResource Include="view\dosen\ShowSiswa.resx">
       <DependentUpon>ShowSiswa.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="view\loginScreen.resx">
+      <DependentUpon>loginScreen.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="view\mahasiswa\createKRS.resx">
       <DependentUpon>createKRS.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="view\mahasiswa\dashboardMhs.resx">
       <DependentUpon>dashboardMhs.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="view\loginScreen.resx">
-      <DependentUpon>loginScreen.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
@@ -265,6 +271,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="view\mahasiswa\showKRS.resx">
       <DependentUpon>showKRS.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\splash.resx">
+      <DependentUpon>splash.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

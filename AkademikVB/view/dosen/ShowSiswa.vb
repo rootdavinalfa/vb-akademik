@@ -61,6 +61,7 @@
 
                 dgvSiswa.Rows.Add(cmk, nmk, nim, nama, smt)
             Next
+            dgvSiswa.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
         Catch ex As Exception
             MessageBox.Show(ex.Message)
         End Try
