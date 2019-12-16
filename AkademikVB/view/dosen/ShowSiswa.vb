@@ -30,9 +30,14 @@
                 .ValueMember = "idMataKuliah"
                 .DisplayMember = "MataKuliah"
             End With
-            initSiswa()
+            If dss.Tables(0).Rows.Count <> 0 Then
+                initSiswa()
 
-            AddHandler pickMK.SelectedIndexChanged, AddressOf PickMK_SelectedIndexChanged
+                AddHandler pickMK.SelectedIndexChanged, AddressOf PickMK_SelectedIndexChanged
+            Else
+                MessageBox.Show("Anda tidak mempunyai mahasiswa,kasihan deh lo!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                Close()
+            End If
         Catch ex As Exception
             MessageBox.Show(ex.Message)
         End Try
