@@ -31,7 +31,7 @@ Public Class createKRS
         dgvAvail.Columns.Add("cmk", "Kode MK")
         dgvAvail.Columns.Add("nmk", "Mata Kuliah")
         dgvAvail.Columns.Add("ndosen", "Dosen")
-        dgvAvail.Columns.Add("ckelompok", "Kelompok")
+        dgvAvail.Columns.Add("ckelompok", "Semester")
         'DGV Picked
         dgvPicked.Columns.Add("cmk", "Kode MK")
         dgvPicked.Columns.Add("nmk", "Mata Kuliah")
@@ -66,14 +66,15 @@ Public Class createKRS
     Private Sub initKrs()
         ds.Clear()
         Try
-            Dim Sqls = "SELECT pengajar.kelompok, matakuliahList.MataKuliah, dosenList.Nama, pengajar.idMK, pengajar.dosen, pengajar.idPengajar
+            Dim Sqls = "SELECT matakuliahList.semester, matakuliahList.MataKuliah, dosenList.Nama, pengajar.idMK, pengajar.dosen, pengajar.idPengajar
                 FROM matakuliahList INNER JOIN (dosenList INNER JOIN pengajar ON dosenList.NID = pengajar.dosen) ON matakuliahList.idMataKuliah = pengajar.idMK
-                WHERE (((pengajar.kelompok)=@1));
+                WHERE (((pengajar.kelompok)=@1 AND matakuliahList.semester = @2));
                 "
             Console.WriteLine(datas.Name)
             Dim ole = con.CreateCommand()
             ole.CommandText = Sqls
             ole.Parameters.Add(New OleDb.OleDbParameter("@1", datas.Kelompok))
+            ole.Parameters.Add(New OleDb.OleDbParameter("@2", datas.Semester))
             Dim da As New OleDb.OleDbDataAdapter(ole)
             da.Fill(ds)
             For i = 0 To ds.Tables(0).Rows.Count - 1
@@ -84,6 +85,10 @@ Public Class createKRS
 
                 dgvAvail.Rows.Add(mk, nmk, dsn, kel)
             Next
+            If ds.Tables(0).Rows.Count = 0 Then
+                MessageBox.Show("Matakuliah untuk anda tidak ada,harap hubungi admin untuk informasi lebih lanjut!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                Close()
+            End If
             dgvAvail.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
         Catch ex As Exception
             MessageBox.Show(ex.Message)
