@@ -7,4 +7,7 @@
     Public Property Jurusan() As Integer
     Public Property Kelompok() As Integer
 
+    'Id Pengajar used by Dosen
+    Public Property IDPengajar() As Integer
+
 End Class

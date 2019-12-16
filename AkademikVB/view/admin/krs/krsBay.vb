@@ -32,6 +32,8 @@
                 textFakultas.Text = reader.Item(2).ToString
                 textProdi.Text = reader.Item(3).ToString
                 fillDGV()
+            Else
+                MsgBox("NIM Not Found!")
             End If
         Catch ex As Exception
             MsgBox(ex.Message)
@@ -81,7 +83,7 @@
                     ole.CommandText = sql
                     ole.Parameters.Add(New OleDb.OleDbParameter("@1", "ACC"))
                     ole.Parameters.Add(New OleDb.OleDbParameter("@2", inputNIM.Text.ToString))
-                    ole.Parameters.Add(New OleDb.OleDbParameter("@2", dgr.Cells(2).Value.ToString))
+                    ole.Parameters.Add(New OleDb.OleDbParameter("@3", dgr.Cells(2).Value.ToString))
                     ole.ExecuteNonQuery()
                     'Console.WriteLine(dgr.Cells(0).Value.ToString + "::" + dgr.Cells(5).Value.ToString)
                 End If

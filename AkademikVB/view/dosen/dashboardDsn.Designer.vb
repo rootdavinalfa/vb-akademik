@@ -26,11 +26,12 @@ Partial Class dashboardDsn
         Me.btnLogout = New System.Windows.Forms.Button()
         Me.lblWelcome = New System.Windows.Forms.Label()
         Me.btnShowMK = New System.Windows.Forms.Button()
+        Me.btnInputNilai = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'btnShowMahasiswa
         '
-        Me.btnShowMahasiswa.Location = New System.Drawing.Point(141, 117)
+        Me.btnShowMahasiswa.Location = New System.Drawing.Point(77, 117)
         Me.btnShowMahasiswa.Name = "btnShowMahasiswa"
         Me.btnShowMahasiswa.Size = New System.Drawing.Size(153, 80)
         Me.btnShowMahasiswa.TabIndex = 9
@@ -58,18 +59,28 @@ Partial Class dashboardDsn
         '
         'btnShowMK
         '
-        Me.btnShowMK.Location = New System.Drawing.Point(381, 117)
+        Me.btnShowMK.Location = New System.Drawing.Point(260, 117)
         Me.btnShowMK.Name = "btnShowMK"
         Me.btnShowMK.Size = New System.Drawing.Size(149, 80)
         Me.btnShowMK.TabIndex = 10
         Me.btnShowMK.Text = "Lihat MK"
         Me.btnShowMK.UseVisualStyleBackColor = True
         '
+        'btnInputNilai
+        '
+        Me.btnInputNilai.Location = New System.Drawing.Point(433, 117)
+        Me.btnInputNilai.Name = "btnInputNilai"
+        Me.btnInputNilai.Size = New System.Drawing.Size(149, 80)
+        Me.btnInputNilai.TabIndex = 11
+        Me.btnInputNilai.Text = "Input Nilai"
+        Me.btnInputNilai.UseVisualStyleBackColor = True
+        '
         'dashboardDsn
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(645, 209)
+        Me.Controls.Add(Me.btnInputNilai)
         Me.Controls.Add(Me.btnShowMK)
         Me.Controls.Add(Me.btnShowMahasiswa)
         Me.Controls.Add(Me.btnLogout)
@@ -86,4 +97,5 @@ Partial Class dashboardDsn
     Friend WithEvents btnLogout As Button
     Friend WithEvents lblWelcome As Label
     Friend WithEvents btnShowMK As Button
+    Friend WithEvents btnInputNilai As Button
 End Class

@@ -24,6 +24,7 @@ Partial Class showKRS
     Private Sub InitializeComponent()
         Me.lblSmtKelompok = New System.Windows.Forms.Label()
         Me.krsDGV = New System.Windows.Forms.DataGridView()
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         CType(Me.krsDGV, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -40,16 +41,25 @@ Partial Class showKRS
         'krsDGV
         '
         Me.krsDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.krsDGV.Location = New System.Drawing.Point(21, 80)
+        Me.krsDGV.Location = New System.Drawing.Point(21, 138)
         Me.krsDGV.Name = "krsDGV"
-        Me.krsDGV.Size = New System.Drawing.Size(767, 358)
+        Me.krsDGV.Size = New System.Drawing.Size(767, 300)
         Me.krsDGV.TabIndex = 1
+        '
+        'ComboBox1
+        '
+        Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Location = New System.Drawing.Point(21, 72)
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Size = New System.Drawing.Size(301, 21)
+        Me.ComboBox1.TabIndex = 2
         '
         'showKRS
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.ComboBox1)
         Me.Controls.Add(Me.krsDGV)
         Me.Controls.Add(Me.lblSmtKelompok)
         Me.MaximizeBox = False
@@ -64,4 +74,5 @@ Partial Class showKRS
 
     Friend WithEvents lblSmtKelompok As Label
     Friend WithEvents krsDGV As DataGridView
+    Friend WithEvents ComboBox1 As ComboBox
 End Class

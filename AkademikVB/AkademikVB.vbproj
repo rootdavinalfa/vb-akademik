@@ -165,6 +165,12 @@
     <Compile Include="view\dosen\dashboardDsn.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="view\dosen\InputNilai.Designer.vb">
+      <DependentUpon>InputNilai.vb</DependentUpon>
+    </Compile>
+    <Compile Include="view\dosen\InputNilai.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="view\dosen\ShowNgajar.Designer.vb">
       <DependentUpon>ShowNgajar.vb</DependentUpon>
     </Compile>
@@ -247,6 +253,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="view\dosen\dashboardDsn.resx">
       <DependentUpon>dashboardDsn.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\dosen\InputNilai.resx">
+      <DependentUpon>InputNilai.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="view\dosen\ShowNgajar.resx">
       <DependentUpon>ShowNgajar.vb</DependentUpon>

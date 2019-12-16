@@ -18,7 +18,8 @@
             dss.Clear()
             Dim sql = "SELECT pengajar.dosen, matakuliahList.idMataKuliah, matakuliahList.MataKuliah, matakuliahList.semester
                         FROM matakuliahList INNER JOIN pengajar ON matakuliahList.idMataKuliah = pengajar.idMK
-                        WHERE (((pengajar.dosen)=@1));
+                        GROUP BY pengajar.dosen, matakuliahList.idMataKuliah, matakuliahList.MataKuliah, matakuliahList.semester
+                        HAVING (((pengajar.dosen)=@1));
                         "
             Dim ole = con.CreateCommand()
             ole.CommandText = sql

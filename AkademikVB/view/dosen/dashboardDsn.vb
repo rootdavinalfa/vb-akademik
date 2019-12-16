@@ -41,4 +41,9 @@
         ShowNgajar.datas = users
         ShowNgajar.ShowDialog()
     End Sub
+
+    Private Sub btnInputNilai_Click(sender As Object, e As EventArgs) Handles btnInputNilai.Click
+        InputNilai.datas = users
+        InputNilai.ShowDialog()
+    End Sub
 End Class
