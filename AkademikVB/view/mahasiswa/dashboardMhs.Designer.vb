@@ -28,6 +28,7 @@ Partial Class dashboardMhs
         Me.btnCreateKRS = New System.Windows.Forms.Button()
         Me.lblClass = New System.Windows.Forms.Label()
         Me.lblID = New System.Windows.Forms.Label()
+        Me.btnNilai = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'lblWelcome
@@ -52,7 +53,7 @@ Partial Class dashboardMhs
         '
         'btnShowKRS
         '
-        Me.btnShowKRS.Location = New System.Drawing.Point(346, 154)
+        Me.btnShowKRS.Location = New System.Drawing.Point(264, 154)
         Me.btnShowKRS.Name = "btnShowKRS"
         Me.btnShowKRS.Size = New System.Drawing.Size(111, 74)
         Me.btnShowKRS.TabIndex = 6
@@ -61,7 +62,7 @@ Partial Class dashboardMhs
         '
         'btnCreateKRS
         '
-        Me.btnCreateKRS.Location = New System.Drawing.Point(200, 154)
+        Me.btnCreateKRS.Location = New System.Drawing.Point(84, 154)
         Me.btnCreateKRS.Name = "btnCreateKRS"
         Me.btnCreateKRS.Size = New System.Drawing.Size(114, 74)
         Me.btnCreateKRS.TabIndex = 5
@@ -87,11 +88,21 @@ Partial Class dashboardMhs
         Me.lblID.TabIndex = 8
         Me.lblID.Text = "09019019091090"
         '
+        'btnNilai
+        '
+        Me.btnNilai.Location = New System.Drawing.Point(447, 154)
+        Me.btnNilai.Name = "btnNilai"
+        Me.btnNilai.Size = New System.Drawing.Size(111, 74)
+        Me.btnNilai.TabIndex = 9
+        Me.btnNilai.Text = "Lihat Nilai"
+        Me.btnNilai.UseVisualStyleBackColor = True
+        '
         'dashboardMhs
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(629, 248)
+        Me.Controls.Add(Me.btnNilai)
         Me.Controls.Add(Me.lblID)
         Me.Controls.Add(Me.lblClass)
         Me.Controls.Add(Me.btnShowKRS)
@@ -113,4 +124,5 @@ Partial Class dashboardMhs
     Friend WithEvents btnShowKRS As Button
     Friend WithEvents lblClass As Label
     Friend WithEvents lblID As Label
+    Friend WithEvents btnNilai As Button
 End Class

@@ -73,4 +73,9 @@
 
         Return False
     End Function
+
+    Private Sub btnNilai_Click(sender As Object, e As EventArgs) Handles btnNilai.Click
+        lihatNilai.datas = users
+        lihatNilai.ShowDialog()
+    End Sub
 End Class

@@ -170,4 +170,7 @@ Public Class createKRS
         Return False
     End Function
 
+    Private Sub lblKrsInfo_Click(sender As Object, e As EventArgs) Handles lblKrsInfo.Click
+
+    End Sub
 End Class
