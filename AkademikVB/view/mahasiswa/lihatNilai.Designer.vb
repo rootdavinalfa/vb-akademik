@@ -32,14 +32,14 @@ Partial Class lihatNilai
         'dgvNilai
         '
         Me.dgvNilai.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvNilai.Location = New System.Drawing.Point(12, 240)
+        Me.dgvNilai.Location = New System.Drawing.Point(12, 35)
         Me.dgvNilai.Name = "dgvNilai"
-        Me.dgvNilai.Size = New System.Drawing.Size(776, 198)
+        Me.dgvNilai.Size = New System.Drawing.Size(776, 336)
         Me.dgvNilai.TabIndex = 0
         '
         'txtSmt
         '
-        Me.txtSmt.Location = New System.Drawing.Point(154, 44)
+        Me.txtSmt.Location = New System.Drawing.Point(66, 6)
         Me.txtSmt.Name = "txtSmt"
         Me.txtSmt.Size = New System.Drawing.Size(100, 20)
         Me.txtSmt.TabIndex = 1
@@ -47,7 +47,7 @@ Partial Class lihatNilai
         'lblSmt
         '
         Me.lblSmt.AutoSize = True
-        Me.lblSmt.Location = New System.Drawing.Point(39, 47)
+        Me.lblSmt.Location = New System.Drawing.Point(9, 9)
         Me.lblSmt.Name = "lblSmt"
         Me.lblSmt.Size = New System.Drawing.Size(51, 13)
         Me.lblSmt.TabIndex = 2
@@ -55,7 +55,7 @@ Partial Class lihatNilai
         '
         'btnShow
         '
-        Me.btnShow.Location = New System.Drawing.Point(179, 91)
+        Me.btnShow.Location = New System.Drawing.Point(191, 6)
         Me.btnShow.Name = "btnShow"
         Me.btnShow.Size = New System.Drawing.Size(75, 23)
         Me.btnShow.TabIndex = 3
@@ -66,7 +66,7 @@ Partial Class lihatNilai
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.ClientSize = New System.Drawing.Size(800, 383)
         Me.Controls.Add(Me.btnShow)
         Me.Controls.Add(Me.lblSmt)
         Me.Controls.Add(Me.txtSmt)
